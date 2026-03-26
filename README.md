@@ -1,6 +1,7 @@
 # Anomaly Detection and Data Quality Correction for Transformer Load Time Series
 
 **Topic:** Electricity Demand Forecasting
+
 **Credit Load:** 6 ECTS (150 hours)
 
 ## Background and Motivation
@@ -16,10 +17,10 @@ TSLib is an open-source deep learning library developed at Tsinghua University, 
 * **Anomaly detection**
 * **Classification**
 All tasks share a common entry point (`run.py`) and are configured via command-line arguments or shell scripts. The library includes a wide range of model architectures, from simple linear baselines (DLinear) to advanced Transformer-based models (iTransformer, TimesNet, FEDformer, Autoformer, Non-stationary Transformer). You are expected to become familiar with the library's structure, including its data loading pipeline (`data_provider/`), experiment classes (`exp/`), and evaluation utilities (`utils/metrics.py`).
----
+
 ## Dataset
 You will be provided with a **synthetic dataset** that simulates transformer station load measurements alongside co-located **weather data** (e.g., temperature, solar irradiance, cloud cover). The dataset has been designed to reflect realistic characteristics of trafo load profiles from a municipal grid operator, including injected anomalies of different types (spikes, flatlines, missing intervals). The exact format and variable descriptions will be provided separately.
----
+
 ## Your Task
 Your work is structured in three connected phases:
 **Phase 1 — Anomaly Detection**
@@ -28,7 +29,7 @@ Using TSLib's anomaly detection task, you will benchmark at least **three models
 Once anomalies have been flagged, the next step is to replace the identified faulty values with plausible reconstructed ones. You will use TSLib's imputation task to reconstruct the flagged intervals, benchmarking at least **two imputation models** (suggested: Non-stationary Transformer, TimesNet). You will evaluate reconstruction quality using MSE and MAE against the known ground-truth values in the synthetic dataset.
 **Phase 3 — Impact Assessment on Forecasting**
 To demonstrate the practical value of your data correction pipeline, you will train a short-term forecasting model (e.g., DLinear or TimesNet) on two versions of the dataset: the raw (uncorrected) data and the corrected (post-imputation) data. By comparing forecasting accuracy (MSE, MAE) across both versions, you will quantify the downstream benefit of the anomaly detection and correction pipeline.
----
+
 ## Deliverables
 You are expected to submit the following:
 1. **Written Report** — A structured scientific report (~4,000–6,000 words) covering:
@@ -41,7 +42,7 @@ You are expected to submit the following:
     * Conclusion
 2. **Code Repository** — A clean, documented version of all scripts used for your experiments, structured so that results can be reproduced. This should be based on the TSLib framework and submitted alongside the report.
 3. **Presentation** — A 15–20 minute oral presentation of your findings, including a live or recorded demo of the TSLib pipeline running on the provided dataset.
----
+
 ## Recommended Starting Points
 * Work through the TSLib tutorial notebook (`tutorial/TimesNet_tutorial.ipynb`) before starting experiments
 * Study the `exp/exp_anomaly_detection.py` and `exp/exp_imputation.py` files to understand the task pipelines
