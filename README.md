@@ -1,6 +1,8 @@
 # Anomaly Detection and Data Quality Correction for Transformer Load Time Series
+
 **Topic:** Electricity Demand Forecasting
 **Credit Load:** 6 ECTS (150 hours)
+
 ---
 ## Background and Motivation
 Municipal electricity distribution grids consist of hundreds of transformer (trafo) stations that continuously record load measurements. In practice, these recordings are frequently affected by sensor malfunctions, communication dropouts, meter resets, and physically implausible spikes or flatlines. If left uncorrected, such anomalies directly degrade the accuracy of any forecasting model trained on the data. Before advanced forecasting techniques can be meaningfully applied to real-world trafo data, a robust and reproducible data quality pipeline must be established.
