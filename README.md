@@ -3,11 +3,11 @@
 **Topic:** Electricity Demand Forecasting
 **Credit Load:** 6 ECTS (150 hours)
 
----
 ## Background and Motivation
 Municipal electricity distribution grids consist of hundreds of transformer (trafo) stations that continuously record load measurements. In practice, these recordings are frequently affected by sensor malfunctions, communication dropouts, meter resets, and physically implausible spikes or flatlines. If left uncorrected, such anomalies directly degrade the accuracy of any forecasting model trained on the data. Before advanced forecasting techniques can be meaningfully applied to real-world trafo data, a robust and reproducible data quality pipeline must be established.
 Your work addresses this foundational challenge. You will investigate whether state-of-the-art deep learning models for **anomaly detection** and **imputation** — as implemented in the Time Series Library (TSLib) — can be used to automatically identify and correct faulty measurements in transformer load time series, and whether doing so leads to measurably better forecasting outcomes.
----
+
+
 ## The Time Series Library (TSLib)
 TSLib is an open-source deep learning library developed at Tsinghua University, designed as a unified benchmark and development platform for time series analysis. It supports five core tasks under a single codebase:
 * **Long-term forecasting**
