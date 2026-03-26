@@ -1,7 +1,6 @@
 # Anomaly Detection and Data Quality Correction for Transformer Load Time Series
 
-**Topic:** Electricity Demand Forecasting
-
+**Topic:** Electricity Demand Forecasting  
 **Credit Load:** 6 ECTS (150 hours)
 
 ## Background and Motivation
@@ -24,13 +23,13 @@ You will be provided with a **synthetic dataset** that simulates transformer sta
 ## Your Task
 Your work is structured in three connected phases:
 
-**Phase 1 — Anomaly Detection**
+**Phase 1 — Anomaly Detection**  
 Using TSLib's anomaly detection task, you will benchmark at least **three models** from the library (suggested starting points: TimesNet, FEDformer, Autoformer) on the provided dataset. Your goal is to evaluate how well each model flags anomalous intervals in the load time series. You will experiment with the `--anomaly_ratio` parameter to understand how the models' sensitivity affects detection performance, and you will document the precision, recall, and F1 score for each configuration.
 
-**Phase 2 — Imputation (Value Correction)**
+**Phase 2 — Imputation (Value Correction)**  
 Once anomalies have been flagged, the next step is to replace the identified faulty values with plausible reconstructed ones. You will use TSLib's imputation task to reconstruct the flagged intervals, benchmarking at least **two imputation models** (suggested: Non-stationary Transformer, TimesNet). You will evaluate reconstruction quality using MSE and MAE against the known ground-truth values in the synthetic dataset.
 
-**Phase 3 — Impact Assessment on Forecasting**
+**Phase 3 — Impact Assessment on Forecasting**  
 To demonstrate the practical value of your data correction pipeline, you will train a short-term forecasting model (e.g., DLinear or TimesNet) on two versions of the dataset: the raw (uncorrected) data and the corrected (post-imputation) data. By comparing forecasting accuracy (MSE, MAE) across both versions, you will quantify the downstream benefit of the anomaly detection and correction pipeline.
 
 ## Deliverables
